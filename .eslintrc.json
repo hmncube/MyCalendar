@@ -5,7 +5,10 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:react/recommended",
+        "airbnb",
+        "airbnb/hooks"
     ],
     "overrides": [
     ],
@@ -14,7 +17,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-native"
     ],
     "rules": {
     }
