@@ -8,7 +8,9 @@
         "standard-with-typescript",
         "plugin:react/recommended",
         "airbnb",
-        "airbnb/hooks"
+        "airbnb/hooks",
+        "prettier",
+        "prettier/react"
     ],
     "overrides": [
     ],
