@@ -1,21 +1,12 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { useColorScheme } from 'react-native';
-import { Cood } from '../data/Cood';
-import { WeatherData } from '../data/WeatherData';
-import { getWeatherData, storeAppearanceMode, getAppearanceMode } from '../util/Repository';
-import Geolocation from '@react-native-community/geolocation';
-import { Error } from '../data/Error';
-
+import { getTheme } from './ThemeColors.ts';
 export const ThemeContext = createContext();
 
-const getPhoneMode = () => {
-  return useColorScheme() === 'dark';
-};
-
 export const ThemeContextProvider = ({ children }) => {
-  const [isDarkMode, setMode] = useState<Boolean>(true);
+  const theme = getTheme('dark'); //TODO read value from db and use
   const themeValue = {
-    isDarkMode,
+    theme,
   };
 
   return <ThemeContext.Provider value={themeValue}>{children}</ThemeContext.Provider>;
