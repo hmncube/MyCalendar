@@ -8,15 +8,9 @@ import { ThemeContextProvider } from './src/theme/ThemeContext';
 
 export default function App() {
   return (
-    //<Provider store={myStore}>
-    // <View style={styles.container}>
-    //   <Text>Open up App.js to start working on your app! </Text>
-    //   <StatusBar style="auto" />
-    // </View>
-    //</Provider>
-    <ThemeContextProvider>
+    <Provider store={myStore}>
       <Login />
-    </ThemeContextProvider>
+    </Provider>
   );
 }
 
