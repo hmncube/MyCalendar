@@ -19,7 +19,7 @@ const Fab = ({ onPress }) => {
           onPress();
         }}
       >
-        <Icon name="person" color={theme.onPrimary} size={24} style={styles(theme).icon} />
+        <Icon name="post-add" color={theme.onPrimary} size={24} style={styles(theme).icon} />
       </Pressable>
     </View>
   );
