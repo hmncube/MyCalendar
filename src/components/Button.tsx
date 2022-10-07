@@ -6,7 +6,12 @@ const Button = ({ onPress, title }) => {
   const theme = useSelector((state) => state.themeReducer.mode);
   return (
     <Pressable
-      style={styles(theme).button}
+      style={({ pressed }) => [
+        {
+          backgroundColor: pressed ? theme.secondary : theme.primary,
+        },
+        styles(theme).button,
+      ]}
       onPress={() => {
         onPress();
       }}
@@ -27,7 +32,6 @@ const styles = (theme) =>
       paddingHorizontal: 32,
       borderRadius: 20,
       elevation: 3,
-      backgroundColor: theme.primary,
       marginTop: 16,
     },
     text: {
