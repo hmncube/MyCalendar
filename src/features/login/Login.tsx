@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Input from '../../components/MyInput';
 import Button from '../../components/Button';
 import TextButton from '../../components/TextButton';
+import ErrorText from '../../components/ErrorText';
 
 const Login = () => {
   const theme = useSelector((state) => state.themeReducer.mode);
@@ -23,6 +24,7 @@ const Login = () => {
         <Input isPassWord={false} onTextChanged={setUserName} />
         <Input isPassWord={true} onTextChanged={setPassword} />
         <Button onPress={onSubmit} title="Login" />
+        <ErrorText msg="Error" />
         <TextButton onPress={onSubmit} title="New here? Create an account" />
       </View>
     </SafeAreaView>
