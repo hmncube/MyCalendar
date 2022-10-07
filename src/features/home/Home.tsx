@@ -14,10 +14,18 @@ import Fab from '../../components/Fab';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Home = () => {
-  const theme = useSelector((state) => state.themeReducer.mode);
+  const themeState = useSelector((state) => state.themeReducer);
+  const theme = themeState.theme;
+  const mode = themeState.mode;
+  console.log(theme);
+
   const clickHandler = () => {};
   return (
     <SafeAreaView style={styles(theme).container}>
+      <StatusBar
+        barStyle={mode === 'dark' ? 'light-content' : 'dark-content'}
+        backgroundColor={theme.background}
+      />
       <View style={{ flex: 1 }}>
         <Text style={styles(theme).text}>TODAYS TASKS</Text>
       </View>
@@ -38,7 +46,6 @@ const styles = (theme) =>
     text: {
       flex: 1,
       fontSize: 32,
-      marginTop: 100,
       color: theme.primary,
       textAlign: 'center',
       fontWeight: 'bold',

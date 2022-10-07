@@ -8,7 +8,9 @@ import TextButton from '../../components/TextButton';
 import ErrorText from '../../components/ErrorText';
 
 const Login = () => {
-  const theme = useSelector((state) => state.themeReducer.mode);
+  const themeState = useSelector((state) => state.themeReducer);
+  const theme = themeState.theme;
+  const mode = themeState.mode;
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const onSubmit = () => {

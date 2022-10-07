@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Fab = ({ onPress }) => {
-  const theme = useSelector((state) => state.themeReducer.mode);
+  const themeState = useSelector((state) => state.themeReducer);
+  const theme = themeState.theme;
   return (
     <View style={styles(theme).container}>
       <Pressable
