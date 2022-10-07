@@ -10,6 +10,7 @@ export const ThemeColors = {
   onBackground: { light: '#000000', dark: '#FFFFFF' },
   onSurface: { light: '#000000', dark: '#FFFFFF' },
   onError: { light: '#FFFFFF', dark: '#000000' },
+  hint: { light: '#9A9A9A', dark: '#9A9A9A' },
 };
 
 export const getTheme = (mode: string) => {
